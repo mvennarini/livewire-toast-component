@@ -60,33 +60,38 @@ Per dispacciare da un componente Livewire, utilizza il seguente formato nel codi
 
 ```php
 // Può essere 'success', 'error', 'warning', 'help'
-$this->dispatch('notifica', [
-    'toastData' => [
-        'message' => 'Messaggio di successo',
+$this->dispatch(
+    'notifica',
+        toastData: [
+        'message' => 'Messaggio di successo!',
         'type' => 'success',
     ]
-]);
+);
 
-$this->dispatch('notifica', [
-    'toastData' => [
-        'message' => 'Messaggio di errore',
-        'type' => 'error', 
-    ]
-]);
 
-$this->dispatch('notifica', [
-    'toastData' => [
-        'message' => 'Messaggio di warning',
-        'type' => 'warning', 
+$this->dispatch(
+    'notifica',
+        toastData: [
+        'message' => 'Messaggio di errore :(',
+        'type' => 'error',
     ]
-]);
+);
 
-$this->dispatch('notifica', [
-    'toastData' => [
-        'message' => 'Messaggio di aiuto',
-        'type' => 'help', 
+$this->dispatch(
+    'notifica',
+        toastData: [
+        'message' => 'Messaggio di Warning!',
+        'type' => 'warning',
     ]
-]);
+);
+
+$this->dispatch(
+    'notifica',
+        toastData: [
+        'message' => 'Messaggio di aiuto!',
+        'type' => 'help',
+    ]
+);
 ```
 ## Utilizzo lato Javascript
 
